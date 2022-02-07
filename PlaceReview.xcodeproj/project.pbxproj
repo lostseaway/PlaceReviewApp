@@ -8,17 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		9E77251427B117BF00E5826F /* PlaceReviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77251327B117BF00E5826F /* PlaceReviewApp.swift */; };
-		9E77251627B117BF00E5826F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77251527B117BF00E5826F /* ContentView.swift */; };
 		9E77251827B117C100E5826F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E77251727B117C100E5826F /* Assets.xcassets */; };
 		9E77251B27B117C100E5826F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E77251A27B117C100E5826F /* Preview Assets.xcassets */; };
+		9E77252727B1181300E5826F /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77252427B1181300E5826F /* ImagePickerView.swift */; };
+		9E77252827B1181300E5826F /* MainMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77252527B1181300E5826F /* MainMapView.swift */; };
+		9E77252927B1181300E5826F /* MapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77252627B1181300E5826F /* MapDetailView.swift */; };
+		9E77252C27B1183200E5826F /* MainMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77252A27B1183200E5826F /* MainMapViewModel.swift */; };
+		9E77252D27B1183200E5826F /* MapDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77252B27B1183200E5826F /* MapDetailViewModel.swift */; };
+		9E77253027B1183B00E5826F /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77252E27B1183B00E5826F /* Place.swift */; };
+		9E77253127B1183B00E5826F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E77252F27B1183B00E5826F /* Comment.swift */; };
+		9E77253427B119D800E5826F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9E77253327B119D800E5826F /* FirebaseAuth */; };
+		9E77253627B119D800E5826F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9E77253527B119D800E5826F /* FirebaseDatabase */; };
+		9E77253827B119D800E5826F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9E77253727B119D800E5826F /* FirebaseStorage */; };
+		9E77253B27B11A8C00E5826F /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 9E77253A27B11A8C00E5826F /* CodableFirebase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9E77251027B117BF00E5826F /* PlaceReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E77251327B117BF00E5826F /* PlaceReviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceReviewApp.swift; sourceTree = "<group>"; };
-		9E77251527B117BF00E5826F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9E77251727B117C100E5826F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E77251A27B117C100E5826F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9E77252427B1181300E5826F /* ImagePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		9E77252527B1181300E5826F /* MainMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapView.swift; sourceTree = "<group>"; };
+		9E77252627B1181300E5826F /* MapDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailView.swift; sourceTree = "<group>"; };
+		9E77252A27B1183200E5826F /* MainMapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMapViewModel.swift; sourceTree = "<group>"; };
+		9E77252B27B1183200E5826F /* MapDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailViewModel.swift; sourceTree = "<group>"; };
+		9E77252E27B1183B00E5826F /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		9E77252F27B1183B00E5826F /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +42,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E77253627B119D800E5826F /* FirebaseDatabase in Frameworks */,
+				9E77253427B119D800E5826F /* FirebaseAuth in Frameworks */,
+				9E77253B27B11A8C00E5826F /* CodableFirebase in Frameworks */,
+				9E77253827B119D800E5826F /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +71,10 @@
 		9E77251227B117BF00E5826F /* PlaceReview */ = {
 			isa = PBXGroup;
 			children = (
+				9E77252327B117FD00E5826F /* Models */,
+				9E77252227B117F700E5826F /* ViewModels */,
+				9E77252127B117F100E5826F /* Views */,
 				9E77251327B117BF00E5826F /* PlaceReviewApp.swift */,
-				9E77251527B117BF00E5826F /* ContentView.swift */,
 				9E77251727B117C100E5826F /* Assets.xcassets */,
 				9E77251927B117C100E5826F /* Preview Content */,
 			);
@@ -65,6 +87,34 @@
 				9E77251A27B117C100E5826F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9E77252127B117F100E5826F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E77252427B1181300E5826F /* ImagePickerView.swift */,
+				9E77252527B1181300E5826F /* MainMapView.swift */,
+				9E77252627B1181300E5826F /* MapDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9E77252227B117F700E5826F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9E77252A27B1183200E5826F /* MainMapViewModel.swift */,
+				9E77252B27B1183200E5826F /* MapDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9E77252327B117FD00E5826F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9E77252F27B1183B00E5826F /* Comment.swift */,
+				9E77252E27B1183B00E5826F /* Place.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +133,12 @@
 			dependencies = (
 			);
 			name = PlaceReview;
+			packageProductDependencies = (
+				9E77253327B119D800E5826F /* FirebaseAuth */,
+				9E77253527B119D800E5826F /* FirebaseDatabase */,
+				9E77253727B119D800E5826F /* FirebaseStorage */,
+				9E77253A27B11A8C00E5826F /* CodableFirebase */,
+			);
 			productName = PlaceReview;
 			productReference = 9E77251027B117BF00E5826F /* PlaceReview.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +167,10 @@
 				Base,
 			);
 			mainGroup = 9E77250727B117BF00E5826F;
+			packageReferences = (
+				9E77253227B119D800E5826F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9E77253927B11A8B00E5826F /* XCRemoteSwiftPackageReference "CodableFirebase" */,
+			);
 			productRefGroup = 9E77251127B117BF00E5826F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +197,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E77251627B117BF00E5826F /* ContentView.swift in Sources */,
+				9E77252927B1181300E5826F /* MapDetailView.swift in Sources */,
+				9E77252C27B1183200E5826F /* MainMapViewModel.swift in Sources */,
+				9E77253027B1183B00E5826F /* Place.swift in Sources */,
+				9E77252D27B1183200E5826F /* MapDetailViewModel.swift in Sources */,
+				9E77252727B1181300E5826F /* ImagePickerView.swift in Sources */,
+				9E77252827B1181300E5826F /* MainMapView.swift in Sources */,
+				9E77253127B1183B00E5826F /* Comment.swift in Sources */,
 				9E77251427B117BF00E5826F /* PlaceReviewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +407,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9E77253227B119D800E5826F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		9E77253927B11A8B00E5826F /* XCRemoteSwiftPackageReference "CodableFirebase" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alickbass/CodableFirebase.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9E77253327B119D800E5826F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E77253227B119D800E5826F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9E77253527B119D800E5826F /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E77253227B119D800E5826F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		9E77253727B119D800E5826F /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E77253227B119D800E5826F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		9E77253A27B11A8C00E5826F /* CodableFirebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E77253927B11A8B00E5826F /* XCRemoteSwiftPackageReference "CodableFirebase" */;
+			productName = CodableFirebase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9E77250827B117BF00E5826F /* Project object */;
 }
