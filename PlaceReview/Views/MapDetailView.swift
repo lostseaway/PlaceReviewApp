@@ -14,6 +14,8 @@ struct MapDetailView: View {
     @ObservedObject var viewModel: MapDetailViewModel
     
     @State var commentText: String = ""
+    @State var isImagePickerDisplay: Bool = false
+    @State var selectedImage: UIImage? = nil
     
     init(place: Place, viewModel: MapDetailViewModel = MapDetailViewModel()) {
         self.place = place
@@ -27,16 +29,19 @@ struct MapDetailView: View {
                     VStack(alignment: .leading) {
                         HStack(alignment: .top) {
                             TextField("Add Your Comment Here...", text: $commentText).onSubmit {
-                                viewModel.addComment(text: commentText, place: place, image: nil)
+                                viewModel.addComment(text: commentText, place: place, image: selectedImage)
                                 commentText = ""
+                                selectedImage = nil
                             }
                             Spacer()
                             Button(action: {
-                                // TODO: Display Image Picker
+                                isImagePickerDisplay = true
                             }, label: {Image(systemName: "paperclip")}).buttonStyle(.borderless)
                         }
                         
-                        // TODO: Display Selected Image
+                        if let image = selectedImage {
+                            Image(uiImage: image).resizable().scaledToFit().padding()
+                        }
                         
                     }.padding()
                 }
@@ -44,7 +49,18 @@ struct MapDetailView: View {
                     ForEach(viewModel.comments) { comment in
                         VStack(alignment: .leading) {
                             Text(comment.text).padding()
-                            // TODO: Display Uploaded Image   
+                            if comment.imageURL != nil {
+                                AsyncImage(url: comment.imageURL,
+                                           content: { image in
+                                                    image.resizable()
+                                                         .aspectRatio(contentMode: .fit)
+                                                },
+                                                placeholder: {
+                                                    ProgressView()
+                                                }
+                                ).padding()
+                            }
+                            
                         }
                     }
                 }
@@ -53,7 +69,9 @@ struct MapDetailView: View {
             .onAppear(perform: {
                 viewModel.fetchPlaceComment(place: place)
             })
-            // TODO: Handle Display Image Picker
+            .sheet(isPresented: self.$isImagePickerDisplay) {
+                ImagePickerView(selectedImage: self.$selectedImage, sourceType: .photoLibrary)
+            }
         }
     }
 }

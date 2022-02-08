@@ -7,6 +7,7 @@
 
 
 import SwiftUI
+import MapKit
 
 struct MainMapView: View {
     @ObservedObject var viewModel: MainMapViewModel
@@ -18,14 +19,24 @@ struct MainMapView: View {
     
     var body: some View {
         NavigationView {
-            // TODO: Add Map View Here
-            Text("Map Here!!")
+            Map(coordinateRegion: $viewModel.currentLocation, showsUserLocation: true, annotationItems: viewModel.mapPlaceMarker, annotationContent: { place in
+                MapAnnotation(coordinate: place.coordinate, content: {
+                    NavigationLink(destination: MapDetailView(place: place), label: {
+                        Image(systemName: "fork.knife.circle")
+                            .font(.system(size: 44))
+                            .foregroundColor(.blue)
+                    })
+                })
+                
+            })
         }.searchable(text: $searchQuery, placement: .navigationBarDrawer, suggestions: {
-            // TODO: Show Search Result
+            ForEach(viewModel.searchLocationResult) { place in
+                Text(place.name).searchCompletion(place.name)
+            }
         }).onChange(of: searchQuery, perform: { newValue in
-            // TODO: Query Places from text
+            viewModel.searchLocation(query: newValue)
         }).onSubmit(of: .search, {
-            // TODO: Perform select place
+            viewModel.moveCenterToPlace(place: viewModel.searchLocationResult[0])
         })
         
     }
